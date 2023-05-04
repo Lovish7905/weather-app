@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:id="@+id/pg"
+    android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/bg" />
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/signout"
+    android:layout_height="wrap_content"
+    android:text="Sign Out"
+    android:textColor="@color/white"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    android:fontFamily="sans-serif"
+    android:textSize="19dp"/>
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Chandigarh"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:layout_below="@+id/city"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="250dp"
+                android:id="@+id/searchcity"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:hint="Search City "
+                />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/img3"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/search1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="26"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tempimg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/temp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tempimg"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Clear"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible" />
+</RelativeLayout>
